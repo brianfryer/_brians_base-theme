@@ -1,0 +1,124 @@
+@import 'normalize';
+@import 'bourbon/bourbon';
+@import 'grid-settings';
+@import 'neat/neat';
+@import 'blend-modes';
+
+// FONTS
+
+%logo-font    { font-family: 'dry-cowboy', serif; font-weight: normal; }
+%heading-font { font-family: 'rooney-web', serif; }
+%main-font    { font-family: 'ff-basic-gothic-web-pro', sans-serif; }
+
+// COLORS
+
+
+/* =========================================================================== *
+ *  Top-level elements  *
+ * ================= */
+
+body {}
+
+h1, h2, h3, h4, h5, h6 {}
+
+a {
+
+  &:hover {}
+}
+
+hr {
+  @extend .clearboth
+}
+
+
+/* =========================================================================== *
+ *  Class-level elements  *
+ * ================= */
+
+.floatleft  { float: left; }
+.floatright { float: right; }
+
+.clearboth  { clear: both; }
+
+
+/* =========================================================================== *
+*  Structural elements  *
+* ================= */
+
+.wrapper { @include outer-container; }
+
+.header-container {}
+
+header {
+
+  h1 {}
+  nav {}
+}
+
+.content-container {
+
+  > section {}
+}
+
+.footer-container {}
+
+> footer {
+
+  > section {}
+  nav {}
+}
+
+
+/* =========================================================================== *
+ *  Navigation elements  *
+ * ================= */
+
+nav {
+
+  .menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    > li {
+      @include inline-block;
+    }
+  }
+
+  &#primary {
+
+    > ul {
+
+      > li {
+
+        > a {
+
+          &:hover {}
+        }
+      }
+    }
+  }
+
+  &#bottom {
+
+    > ul {
+
+      > li {
+
+        > a {
+
+        }
+      }
+    }
+  }
+}
+
+
+/* =========================================================================== *
+ *  "ID"-level elements  *
+ * ================= */
+
+#logo {
+
+  > a {}
+}
